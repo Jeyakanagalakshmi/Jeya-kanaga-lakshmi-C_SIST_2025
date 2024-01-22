@@ -1,0 +1,4 @@
+REVERSE A NUMBER
+
+a=int(input())
+print(str(a)[::-1])
