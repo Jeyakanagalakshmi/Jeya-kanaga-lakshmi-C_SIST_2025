@@ -1,0 +1,19 @@
+//DECIMAL TO BINARY CONVERSION MANUALLY USING BITWISE OPERATOR
+
+import java.lang.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        String s="";
+        int rem=0;
+        while(n>0){
+            rem=n%2;
+            s=rem+s;
+            n/=2;
+        }
+        int c=Integer.parseInt(s);
+        System.out.println(c);
+    }
+}
