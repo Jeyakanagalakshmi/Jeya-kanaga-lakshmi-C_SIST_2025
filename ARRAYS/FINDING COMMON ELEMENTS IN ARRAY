@@ -1,0 +1,35 @@
+//FINDING COMMON ELEMENTS IN ARRAY USING HASHSET
+
+
+import java.lang.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        int m=sc.nextInt();
+        int b[]=new int[m];
+        for(int i=0;i<m;i++){
+            b[i]=sc.nextInt();
+        }
+        Set <Integer> cm=find_common_elements(a,b);
+        System.out.print(cm);
+    }
+    public static Set<Integer> find_common_elements(int[]a,int[]b){
+        Set<Integer>s=new HashSet<>();
+        Set<Integer>ce=new HashSet<>();
+        for(int num:a){
+            s.add(num);
+        }
+        for(int num:b){
+            if(s.contains(num)){
+                ce.add(num);
+            }
+        }
+        return ce;
+    }
+}
