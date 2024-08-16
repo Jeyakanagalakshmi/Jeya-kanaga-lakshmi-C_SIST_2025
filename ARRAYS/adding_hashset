@@ -1,4 +1,17 @@
-HASH SET 
+import java.lang.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        HashSet <String>hs=new HashSet();
+        hs.add("lakshmi");
+        hs.add("boomathi");
+        hs.add("chidambaram");
+        System.out.print(hs);
+    }
+}
+
+
+HASH SET USING ITERATOR METHOD
 
 import java.lang.*;
 import java.util.*;
