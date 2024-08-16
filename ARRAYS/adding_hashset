@@ -10,7 +10,7 @@ class Main{
     }
 }
 
-
+---------------------------------------------------------------------------------
 HASH SET USING ITERATOR METHOD
 
 import java.lang.*;
@@ -31,3 +31,27 @@ public class Main
 	}
 }
 
+------------------------------------------------------------------------------------
+ADDING AND REMOVING VALUES FROM HASHSET
+
+
+import java.lang.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        HashSet <String>hs=new HashSet();
+        hs.add("lakshmi");
+        hs.add("boomathi");
+        hs.add("chidambaram");
+        hs.remove("boomathi");
+       // System.out.print(hs);
+        HashSet<String> hs1=new HashSet();
+        hs1.add("muthu lakshmi");
+        hs1.add("sundar");
+        hs1.addAll(hs);
+        hs1.removeAll(hs);
+        hs1.removeIf(str->str.contains("sundar"));
+        System.out.print(hs1);
+        hs1.clear();
+    }
+}
