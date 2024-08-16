@@ -1,0 +1,14 @@
+import java.lang.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        ArrayList<String>a=new ArrayList<>();
+        a.add("man");
+        a.add("women");
+        a.add("gender");
+        if(!a.isEmpty()){
+            System.out.println(a.get(0));
+            System.out.println(a.get(a.size()-1));
+        }
+    }
+}
