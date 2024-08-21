@@ -1,0 +1,40 @@
+
+
+Given n, which is the number of strings taken as input. For each input use have to print “YES” or “NO” whether the current string is already present or not.
+
+Input:
+5
+Geeks
+Hello
+Great
+Geeks
+Hello
+Output:
+
+No
+No
+No
+Yes
+Yes
+
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        HashSet<String>hs=new HashSet<>();
+        for(int i=0;i<n;i++){
+             String s=sc.nextLine();
+             if(hs.contains(s)){
+                System.out.println("yes");
+            }
+            else{
+                System.out.println("no");
+                hs.add(s);
+            }
+        }
+    }
+}
+
