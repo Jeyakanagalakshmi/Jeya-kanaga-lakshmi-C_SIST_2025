@@ -1,0 +1,23 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        LinkedList <Integer>q=new LinkedList<>();
+        for(int i=0;i<n;i++){
+            int e=sc.nextInt();
+            q.add(e);
+        }
+        LinkedList <Integer>rq=new LinkedList<>();
+        for(int num:q){
+            if(!(num>0 && num%2==0)){
+                rq.add(num);
+            }
+        }
+        for(int i=0;i<rq.size();i++){
+            
+            System.out.println(rq.get(i));
+        }
+    }
+}
