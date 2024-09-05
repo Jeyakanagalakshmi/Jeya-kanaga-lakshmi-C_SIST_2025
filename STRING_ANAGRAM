@@ -1,0 +1,30 @@
+import java.lang.*;
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();
+        String s2=sc.next();
+        anagram(s1,s2);
+    }
+    public static void anagram(String s1,String s2){
+        s1=s1.replaceAll("\\s","").toLowerCase();
+        s2=s2.replaceAll("\\s","").toLowerCase();
+        char[] a=s1.toCharArray();
+        char[] b=s2.toCharArray();
+        int m=s1.length();
+        int n=s2.length();
+        if(m!=n){
+            System.out.print("Strings are not anagrams of each other");
+            return;
+        }
+        Arrays.sort(a);
+        Arrays.sort(b);
+        if(Arrays.equals(a,b)){
+            System.out.print("Strings are anagrams of each other");
+        }
+        else{
+            System.out.print("Strings are not anagrams of each other");
+        }
+    }
+}
